@@ -11,7 +11,7 @@ public class ExceptionApp extends DivisionByZeroExcepton {
         ExceptionApp inst1 = new ExceptionApp();
         System.out.println(inst1.divide2());
     }
-    // komentzra
+ 
 
     static double divide(double x, double y) {
         if (y == 0) {

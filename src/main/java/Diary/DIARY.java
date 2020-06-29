@@ -29,7 +29,7 @@ public class DIARY {
         // kod zwracający wpisy z odpowiednią datą
         for (Entry pod : entries) {
             if (pod.date.isEqual(date)) {
-                System.out.println(pod.text);
+                return pod.text;
             }
         }
         return entries.get(0).date; // ?????????????
@@ -40,11 +40,7 @@ public class DIARY {
         bb.writeEntry("slowo");
         bb.writeEntry("slowo2");
         System.out.println(bb.getEntriesFrom(LocalDate.now()));
-        //System.out.println(bb.entries.get(1).date);
-//        System.out.println(bb.entries.get(0).date);
-//        System.out.println(bb.entries.get(0).text);
-//        System.out.println(bb.entries.get(1).date);
-//        System.out.println(bb.entries.get(1).text);
+
 
 
     }

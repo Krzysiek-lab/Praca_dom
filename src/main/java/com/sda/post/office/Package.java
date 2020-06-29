@@ -2,6 +2,7 @@ package com.sda.post.office;
 
 import javax.naming.InvalidNameException;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import static java.lang.String.valueOf;
 
@@ -9,6 +10,8 @@ public class Package {
     int numberOfPackage;
     String description;
     PackageStatus status;
+
+    Scanner pob = new Scanner(System.in);
 
     public Package() {
         numberOfPackage = (int) (Math.random() * 1000);
@@ -25,16 +28,22 @@ public class Package {
         return status.toString();
     }
 
-    public void method2(String given) throws InvalidNameException {
+    public void method2(String given) {
         for (PackageStatus newStatus : PackageStatus.values()) {
             if (newStatus.toString().equals(valueOf(given))) {
-                System.out.println("MATCH!!");
                 status = PackageStatus.valueOf(given);
+                System.out.println("MATCH!! " + newStatus.toString());
+                return;
             }
         }
-        {
-            throw new InvalidNameException("Wrong status name");
+        for (PackageStatus newStatus2 : PackageStatus.values()) {
+            if (!newStatus2.toString().equals(valueOf(given))) {
+                System.out.println(("Wrong status name, try again: "));
+                String pob2 = pob.nextLine();
+                method2(pob2);
+                return;
+            }
         }
-
     }
 }
+
