@@ -26,5 +26,8 @@ public class TextTruncate implements StringOperation {
         System.out.println(op5.modify("tatot"));
         StringOperation op6 = new Textdots("ma", "czarnego");
         System.out.println(op6.modify("Ala ma czarnego kota filemona"));
+        StringOperation op7 = new RemoveALetters();
+        System.out.println(op7.modify("Ala ma filemona"));
     }
-}
+    }
+

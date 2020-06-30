@@ -1,9 +1,7 @@
 package com.sda.exceptions;
 
 public class ExceptionApp extends DivisionByZeroExcepton {
-    public ExceptionApp() {
-        super();
-    }
+
 
     public static void main(String[] args) {
         System.out.println(divide(4, 2));
@@ -11,6 +9,7 @@ public class ExceptionApp extends DivisionByZeroExcepton {
         ExceptionApp inst1 = new ExceptionApp();
         System.out.println(inst1.divide2());
     }
+ 
 
     static double divide(double x, double y) {
         if (y == 0) {
