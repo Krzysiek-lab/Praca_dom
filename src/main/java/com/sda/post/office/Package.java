@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static java.lang.String.valueOf;
 
-public class Package {
+public class Package  {
     int numberOfPackage;
     String description;
     PackageStatus status;

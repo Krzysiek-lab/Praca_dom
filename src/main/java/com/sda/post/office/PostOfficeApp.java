@@ -1,4 +1,5 @@
 package com.sda.post.office;
+
 import java.util.Arrays;
 
 public class PostOfficeApp {
@@ -12,10 +13,11 @@ public class PostOfficeApp {
         System.out.println(PackageStatus.SENT.toString());
         System.out.println(inst1.toString());
         System.out.println();
+        System.out.println(PackageStatus.SENT.getNextStatuses());
+        System.out.println();
         Package inst3 = new Package();
         System.out.println(Arrays.toString(PackageStatus.values()));
         inst3.method2("TRAVELLIkkkNG");
-
 
     }
 }
